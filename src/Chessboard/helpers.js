@@ -87,11 +87,9 @@ export function validFen(fen) {
   // check each section
   for (let i = 0; i < 8; i++) {
     if (chunks[i].length !== 8 || chunks[i].search(/[^kqrnbpmfdcesKQRNBPMFDCES1]/) !== -1) {
-      console.log('validFen returns false');
       return false;
     }
   }
-  console.log('validFen returns true');
   return true;
 }
 
