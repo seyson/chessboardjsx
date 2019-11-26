@@ -114,7 +114,6 @@ function validPieceCode(code) {
 
 export function validPositionObject(pos) {
   if (pos === null || typeof pos !== 'object') {
-    console.log('fenPositionObject returns false');
     return false;
   }
 
@@ -122,11 +121,9 @@ export function validPositionObject(pos) {
     if (!pos.hasOwnProperty(i)) continue;
 
     if (!validSquare(i) || !validPieceCode(pos[i])) {
-      console.log('fenPositionObject returns false');
       return false;
     }
   }
-  console.log('fenPositionObject returns true');
   return true;
 }
 
