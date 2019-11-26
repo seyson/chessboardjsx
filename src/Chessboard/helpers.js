@@ -86,7 +86,7 @@ export function validFen(fen) {
 
   // check each section
   for (let i = 0; i < 8; i++) {
-    if (chunks[i].length !== 8 || chunks[i].search(/[^kqrnbpmKQRNBPM1]/) !== -1) {
+    if (chunks[i].length !== 8 || chunks[i].search(/[^kqrnbpmfdcesKQRNBPMFDCES1]/) !== -1) {
       console.log('validFen returns false');
       return false;
     }
@@ -111,7 +111,7 @@ function validSquare(square) {
 }
 
 function validPieceCode(code) {
-  return isString(code) && code.search(/^[bw][KQRNBPM]$/) !== -1;
+  return isString(code) && code.search(/^[bw][KQRNBPMFDCES]$/) !== -1;
 }
 
 export function validPositionObject(pos) {

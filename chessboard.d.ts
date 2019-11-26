@@ -4,7 +4,8 @@ import { Square } from "chess.js"
 type Piece =
   'wP' | 'wN' | 'wB' | 'wR' | 'wQ' | 'wK' |
   'bP' | 'bN' | 'bB' | 'bR' | 'bQ' | 'bK' |
-  'wM' | 'bM'
+  'wM' | 'bM' | 'wF' | 'bF' | 'wD' | 'bD' |
+  'wC' | 'bC' | 'wE' | 'bE' | 'wS' | 'bS'
 ;
 
 type Position = {
