@@ -87,10 +87,11 @@ export function validFen(fen) {
   // check each section
   for (let i = 0; i < 8; i++) {
     if (chunks[i].length !== 8 || chunks[i].search(/[^kqrnbpmKQRNBPM1]/) !== -1) {
+      console.log('validFen returns false');
       return false;
     }
   }
-
+  console.log('validFen returns true');
   return true;
 }
 
@@ -114,15 +115,20 @@ function validPieceCode(code) {
 }
 
 export function validPositionObject(pos) {
-  if (pos === null || typeof pos !== 'object') return false;
+  if (pos === null || typeof pos !== 'object') {
+    console.log('fenPositionObject returns false');
+    return false;
+  }
 
   for (let i in pos) {
     if (!pos.hasOwnProperty(i)) continue;
 
     if (!validSquare(i) || !validPieceCode(pos[i])) {
+      console.log('fenPositionObject returns false');
       return false;
     }
   }
+  console.log('fenPositionObject returns true');
   return true;
 }
 
