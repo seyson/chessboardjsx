@@ -3,7 +3,8 @@ import { Square } from "chess.js"
 
 type Piece =
   'wP' | 'wN' | 'wB' | 'wR' | 'wQ' | 'wK' |
-  'bP' | 'bN' | 'bB' | 'bR' | 'bQ' | 'bK'
+  'bP' | 'bN' | 'bB' | 'bR' | 'bQ' | 'bK' |
+  'wM' | 'bM'
 ;
 
 type Position = {
