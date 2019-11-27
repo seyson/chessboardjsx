@@ -90,6 +90,7 @@ export function validFen(fen) {
       return false;
     }
   }
+  console.log('validFen returns true');
   return true;
 }
 
